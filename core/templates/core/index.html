@@ -1,13 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
 
-<ul>
-    {% for url in url %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>URL Saver|Saved</title>
+    <link rel="stylesheet" href="urlsavestyle.css">
+    <script src="https://kit.fontawesome.com/a629854a52.js" crossorigin="anonymous"></script>
+</head>
 
-        <li>
-            <a href="{{ url.url_name }}">{{ url.url_name }}</a>
-            <p>
-                saved on: {{ url.time_saved }}
-            </p>
-        </li>
+<body>
+    <header id="header">
+        <nav id="nav-bar">
+            <h2 class="company-name" title="Return to Home Page"><a class="company-link" href="">URL Saver</a></h2>
+            <div class="menu">
+                <a href="" class="nav-link" href="/">Login</a>
+                <a href="" class="nav-link" href="/">Logout</a>
+                <a href="" class="nav-link" href="/" style="margin-right: 20px;">Profile</a>
+            </div>
+        </nav>
+    </header>
+    <br><br><br>
+    <div class=create-div>
+        <button type="button" class="create"><a class="create-link" href="">CREATE NEW!</a></button>
+    </div>
+    <div class="urls">
+        <br><br>
+        <div class="saved-div">
+            <section class="saved-url">
+                <a href="" target="_blank" class="link-div">
+                    <p class="link-text"><span style="color: black"><i class="fa-solid fa-globe"></i></span>&nbsp; www.javascript.com</p>
+                    <p class="date-text"><span style="color: black">&nbsp;<i class="fa-solid fa-calendar fa-xl"></i></span>&nbsp; &nbsp; &nbsp; Added on: 1<sup>st</sup> November, 2070</p>
+                </a>
+            </section>
+        </div>
+        <br>
+        <button class="edit-button" type="button">Edit</button>
+        <button class="delete-button" type="button">Delete</button>
+        <hr>
+    </div>
+    <div class="urls">
+        <br><br>
+        <div class="saved-div">
+            <section class="saved-url">
+                <a href="" target="_blank" class="link-div">
+                    <p class="link-text"><span style="color: black"><i class="fa-solid fa-globe"></i></span>&nbsp; www.django.com</p>
+                    <p class="date-text"><span style="color: black">&nbsp;<i class="fa-solid fa-calendar fa-xl"></i></span>&nbsp; &nbsp; &nbsp; Added on: 2<sup>nd</sup> August, 2050</p>
+                </a>
+            </section>
+        </div>
+        <br>
+        <button class="edit-button" type="button">Edit</button>
+        <button class="delete-button" type="button">Delete</button>
+        <hr>
+    </div>
+</body>
 
-    {% endfor %}
-</ul>
+</html>
