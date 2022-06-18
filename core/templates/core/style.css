@@ -97,8 +97,10 @@ a.link-div {
 section.saved-url {
     background-color: #F3F4F6;
     width: 80%;
-    height: 150px;
+    height: auto;
     border-radius: 7px;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
 .saved-div :hover {
@@ -149,4 +151,15 @@ hr {
     width: 80%;
     height: 1px;
     background-color: #fcfafa;
+}
+
+footer {
+    background-color: #29bf12;
+    height: 100px;
+}
+
+div.footer-links {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }
