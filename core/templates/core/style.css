@@ -7,7 +7,7 @@ body {
 }
 
 #header {
-    position: sticky;
+    position: fixed;
     width: 100%;
     top: 0;
     left: 0;
@@ -15,17 +15,17 @@ body {
 
 #nav-bar {
     display: flex;
-    align-items: center;
     justify-content: space-between;
-    padding: 10px;
+    padding-left: 10px;
     background-color: #38b000;
-    color: #FFFFFF
+    color: #FFFFFF;
 }
 
 .company-name {
-    font-family: "Lobster Two", sans-serif;
+    font-family: sans-serif;
     font-size: 32px;
-    padding-right: 770px;
+    /*border: 1px solid red;*/
+    min-width: 269.5px;
 }
 
 .company-link {
@@ -35,8 +35,12 @@ body {
 
 .menu {
     display: flex;
-    gap: 30px;
+    justify-content: space-evenly;
+    flex: 1;
+    max-width: 20%;
     font-size: 18px;
+    /*border: 1px solid red;*/
+    align-items: center;
 }
 
 .menu :hover {
@@ -73,6 +77,20 @@ button.create {
     color: white;
 }
 
+div.urls {
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+div.url-separators {
+    border-bottom: 1px solid lightgrey;
+    padding-top: 10px;
+}
+
+.urls:last-child .url-separators {
+    border-bottom: 0px;
+}
+
 div.create-div {
     display: flex;
     flex-direction: row;
@@ -82,12 +100,13 @@ div.create-div {
 div.saved-div {
     display: flex;
     flex-direction: row;
-    justify-content: center;
 }
 
 a.create-link {
     text-decoration: none;
     color: inherit;
+    display: block;
+    width: 100%;
 }
 
 a.link-div {
@@ -96,11 +115,12 @@ a.link-div {
 
 section.saved-url {
     background-color: #F3F4F6;
-    width: 80%;
+    width: 100%;
     height: auto;
     border-radius: 7px;
     padding-top: 10px;
     padding-bottom: 10px;
+    display: flex;
 }
 
 .saved-div :hover {
@@ -118,11 +138,15 @@ section.saved-url {
     color: grey;
 }
 
+.ctrl-buttons {
+    display: flex;
+    justify-content: flex-end;
+}
+
 .edit-button {
     background-color: #29bf12;
     height: 30px;
     width: 60px;
-    margin-left: 80%;
     border: none;
     border-radius: 3px;
     color: white;
@@ -146,13 +170,6 @@ section.saved-url {
     background-color: red;
 }
 
-hr {
-    border-color: #fcfafa;
-    width: 80%;
-    height: 1px;
-    background-color: #fcfafa;
-}
-
 footer {
     background-color: #29bf12;
     height: 100px;
@@ -162,4 +179,52 @@ div.footer-links {
     display: flex;
     justify-content: space-around;
     align-items: center;
+}
+
+@media(max-width: 1111px) {
+    .menu {
+        max-width: 30%;
+        transition: 3s;
+    }
+}
+
+@media(max-width: 900px) {
+    .menu {
+        max-width: 40%;
+        transition: 3s;
+    }
+}
+
+@media(max-width: 600px) {
+    .menu {
+        max-width: 45%;
+        transition: 3s;
+    }
+}
+
+@media(max-width: 500px) {
+    #nav-bar {
+        flex-direction: column;
+        padding-right: 10px;
+    }
+
+    .company-name {
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        flex-grow: 0;
+        text-align: center;
+    }
+
+    .menu {
+        justify-content: space-evenly;
+        align-items: center;
+        max-width: 80%;
+        padding-bottom: 10px;
+        margin-left: 10%;
+    }
+
+    div.free-space {
+        height: 50px;
+    }
 }
